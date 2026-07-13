@@ -50,7 +50,7 @@ const MEMBERS: Member[] = [
     photo: "/team/vlad.jpg",
     role: "Chief Marketing Officer",
     name: "Vlad Sapozhnikoff",
-    bio: "A graduate of the Higher School of Economics and the London School of Economics, with a career spanning payment systems and blockchain. He co-founded a payment-terminal business and later led a cryptocurrency exchange as CEO and co-founder, representing major crypto platforms across Russia and the CIS. A frequent speaker at blockchain conferences and co-founder of a blockchain community, he leads MusharaqaHub\u2019s brand, growth, and market positioning.",
+    bio: "A graduate of the Higher School of Economics and the London School of Economics, where his MSc thesis was titled \u201cValuing dotcoms.\u201d He co-founded a payment-terminal business and later led a cryptocurrency exchange as CEO and co-founder, representing major crypto platforms across Russia and the CIS. A frequent speaker at blockchain conferences and co-founder of a blockchain community, he leads MusharaqaHub\u2019s brand, growth, and market positioning.",
   },
 ];
 
@@ -84,7 +84,7 @@ export function Team() {
   const handleClick = (id: string) => {
     if (
       typeof window !== "undefined" &&
-      window.matchMedia("(hover: none)").matches
+      window.matchMedia("(max-width: 900px), (hover: none)").matches
     ) {
       setSheetId(id);
     }
