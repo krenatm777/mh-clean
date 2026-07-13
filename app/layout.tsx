@@ -36,21 +36,12 @@ export const metadata: Metadata = {
       "Shariah-compliant infrastructure for the tokenization of real economic assets, incorporated in the AIFC.",
     type: "website",
     siteName: "MusharaqaHub",
-    images: [
-      {
-        url: "/opengraph-image",
-        width: 1200,
-        height: 630,
-        alt: "MusharaqaHub",
-      },
-    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "MusharaqaHub | Infrastructure for Real Economic Assets",
     description:
       "Shariah-compliant infrastructure for the tokenization of real economic assets.",
-    images: ["/opengraph-image"],
   },
   icons: {
     icon: "/icon.svg",

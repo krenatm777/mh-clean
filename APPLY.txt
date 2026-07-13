@@ -1,0 +1,12 @@
+OG image update — files to copy into your repo (same paths):
+
+  app/opengraph-image.tsx     (rewritten — light brand OG)
+  app/layout.tsx              (metadata: no duplicate og:image, twitter large image)
+  next.config.ts              (bundles the OG font on Vercel)
+  assets/Marcellus-Regular.woff   (NEW — brand font for the OG headline)
+
+Then:
+  git add -A
+  git commit -m "OG image: light institutional brand"
+  git push
+Vercel redeploys automatically. Verify the preview via a debugger (see chat).

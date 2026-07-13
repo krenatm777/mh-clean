@@ -1,98 +1,148 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
-export const alt = "MusharaqaHUB";
-export const size = {
-  width: 1200,
-  height: 630,
-};
+export const runtime = "nodejs";
+export const alt =
+  "MusharaqaHub — institutional infrastructure for real economic assets";
+export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OpenGraphImage() {
+const INK = "#003D27";
+const GOLD = "#EFCC04";
+const GOLD_DEEP = "#B8901F";
+const PAPER = "#F6F3EA";
+const BODY = "#2E3A34";
+
+const gem = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 340" fill="none">
+<g stroke="${INK}" stroke-width="1.6" stroke-linejoin="round">
+<path d="M160 20 L288 92 V236 L160 308 L32 236 V92 Z"/>
+<path d="M160 20 V96 M288 92 L224 128 M32 92 L96 128 M160 308 V232"/>
+<path d="M96 128 L96 272 M224 128 L224 272 M96 272 L160 308 L224 272"/>
+<path d="M96 128 L160 96 L224 128"/>
+</g>
+<path d="M160 130 L206 170 L160 258 L114 170 Z" fill="rgba(239,204,4,0.14)" stroke="${GOLD_DEEP}" stroke-width="1.8" stroke-linejoin="round"/>
+<path d="M114 170 L160 188 L206 170 M160 130 L160 188 M160 188 L160 258" stroke="${GOLD_DEEP}" stroke-width="1.4"/>
+<circle cx="160" cy="188" r="4" fill="${GOLD}"/>
+</svg>`;
+
+const gemDataUri = `data:image/svg+xml;utf8,${encodeURIComponent(gem)}`;
+
+export default async function Image() {
+  const marcellus = await readFile(
+    join(process.cwd(), "assets/Marcellus-Regular.woff")
+  );
+
   return new ImageResponse(
     (
       <div
         style={{
-          display: "flex",
-          height: "100%",
           width: "100%",
-          background:
-            "radial-gradient(circle at 18% 20%, rgba(0,255,106,0.14), transparent 22%), radial-gradient(circle at 82% 0%, rgba(0,255,106,0.08), transparent 24%), linear-gradient(180deg, #0a0a0a 0%, #090b0a 42%, #0a0a0a 100%)",
-          color: "#f5f5f5",
-          padding: "64px",
-          fontFamily: "Arial",
+          height: "100%",
+          display: "flex",
+          background: PAPER,
+          fontFamily: "Marcellus",
           position: "relative",
         }}
       >
+        {/* gold hairline frame */}
         <div
           style={{
             position: "absolute",
-            inset: "48px",
-            border: "1px solid rgba(255,255,255,0.08)",
-            borderRadius: "36px",
-            background:
-              "linear-gradient(rgba(0,255,106,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,106,0.04) 1px, transparent 1px)",
-            backgroundSize: "56px 56px",
+            inset: 24,
+            border: `1px solid rgba(184,144,31,0.45)`,
           }}
         />
+        {/* deep-green base bar */}
+        <div
+          style={{
+            position: "absolute",
+            left: 0,
+            right: 0,
+            bottom: 0,
+            height: 10,
+            background: INK,
+          }}
+        />
+
+        {/* left column */}
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            position: "relative",
-            zIndex: 1,
-            width: "100%",
+            padding: "78px 64px 74px",
+            width: 760,
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: "18px" }}>
-            <div
-              style={{
-                width: "58px",
-                height: "58px",
-                borderRadius: "999px",
-                border: "1px solid rgba(0,255,106,0.35)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "#00ff6a",
-                fontSize: "18px",
-                fontWeight: 700,
-                letterSpacing: "0.22em",
-              }}
-            >
-              MH
-            </div>
-            <div style={{ display: "flex", fontSize: "34px", fontWeight: 700 }}>
+          <div
+            style={{
+              display: "flex",
+              fontSize: 19,
+              letterSpacing: 3,
+              color: GOLD_DEEP,
+            }}
+          >
+            ASTANA INTERNATIONAL FINANCIAL CENTRE
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              fontSize: 62,
+              lineHeight: 1.06,
+              color: INK,
+            }}
+          >
+            <span style={{ marginRight: 16 }}>Institutional</span>
+            <span style={{ marginRight: 16 }}>infrastructure for</span>
+            <span style={{ color: GOLD_DEEP }}>real economic assets</span>
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <div style={{ display: "flex", fontSize: 40, color: INK }}>
               <span>Musharaqa</span>
-              <span style={{ color: "#00ff6a" }}>HUB</span>
+              <span style={{ color: GOLD_DEEP }}>Hub</span>
             </div>
-          </div>
-          <div style={{ maxWidth: "840px", display: "flex", flexDirection: "column", gap: "24px" }}>
             <div
               style={{
-                color: "#00ff6a",
-                fontSize: "16px",
-                textTransform: "uppercase",
-                letterSpacing: "0.24em",
+                display: "flex",
+                fontSize: 20,
+                letterSpacing: 2,
+                color: BODY,
+                marginTop: 6,
               }}
             >
-              Institutional Digital Asset Infrastructure
-            </div>
-            <div style={{ fontSize: "68px", lineHeight: 1.02, fontWeight: 700, letterSpacing: "-0.05em" }}>
-              Shariah-compliant infrastructure for real-world asset tokenization
-            </div>
-            <div style={{ maxWidth: "760px", color: "rgba(245,245,245,0.78)", fontSize: "28px", lineHeight: 1.4 }}>
-              MusharaqaHUB is focused on structuring participation in selected real economic sectors through ethical principles and blockchain-based infrastructure.
+              musharaqahub.com
             </div>
           </div>
-          <div style={{ display: "flex", gap: "28px", fontSize: "18px", color: "rgba(245,245,245,0.62)", textTransform: "uppercase", letterSpacing: "0.18em" }}>
-            <span>Shariah-aligned</span>
-            <span>Real asset focused</span>
-            <span>Compliance-oriented</span>
-          </div>
+        </div>
+
+        {/* right: signature */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flex: 1,
+          }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={gemDataUri} width={360} height={382} alt="" />
         </div>
       </div>
     ),
-    size,
+    {
+      ...size,
+      fonts: [
+        {
+          name: "Marcellus",
+          data: marcellus,
+          style: "normal",
+          weight: 400,
+        },
+      ],
+    }
   );
 }
