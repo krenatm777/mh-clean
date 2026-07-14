@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { Mission } from "@/components/Mission";
 import { About } from "@/components/About";
 import { ProjectFocus } from "@/components/ProjectFocus";
 import { HowItWorks } from "@/components/HowItWorks";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Header />
       <main>
         <Hero />
+        <Mission />
         <About />
         <div className="facet-rule" aria-hidden="true">
           <svg viewBox="0 0 40 24" fill="none">
