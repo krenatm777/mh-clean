@@ -79,16 +79,6 @@ export function Team() {
     return () => window.removeEventListener("keydown", onKey);
   }, [sheetId]);
 
-  // On touch devices (no hover) a tap opens the sheet; the on-photo overlay is
-  // hover-only and hidden on touch, so the sheet is how mobile users read bios.
-  const handleClick = (id: string) => {
-    if (
-      typeof window !== "undefined" &&
-      window.matchMedia("(max-width: 900px), (hover: none)").matches
-    ) {
-      setSheetId(id);
-    }
-  };
 
   return (
     <section
@@ -114,7 +104,7 @@ export function Team() {
               tabIndex={0}
               role="button"
               aria-label={`${m.name} — view bio`}
-              onClick={() => handleClick(m.id)}
+              onClick={() => setSheetId(m.id)}
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
                   e.preventDefault();
@@ -125,9 +115,6 @@ export function Team() {
               <div className="photo">
                 <span className="bio-cue">＋ Bio</span>
                 <img src={m.photo} alt={m.name} />
-                <div className="bio-overlay">
-                  <p>{m.bio}</p>
-                </div>
               </div>
               <div className="info">
                 <div className="role">{m.role}</div>
