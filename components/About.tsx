@@ -9,7 +9,7 @@ const PRINCIPLES = [
   },
   {
     title: "Digital by infrastructure",
-    text: "Permissioned, compliance-ready token standards bring transparency to ownership and records",
+    text: "Built on permissioned, identity-gated token standards (ERC-3643) — AIFC rules require every holder to be identified, keeping ownership transparent within a closed, compliant network",
   },
 ];
 

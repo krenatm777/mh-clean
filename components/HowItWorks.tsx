@@ -12,7 +12,7 @@ const STEPS = [
   {
     n: "Step 03",
     title: "Tokenized participation",
-    text: "Participation is represented on permissioned, compliance-ready infrastructure",
+    text: "Each token represents a share of participation in a Musharakah structure — an equity interest legally backed by documented title, not a debt claim",
   },
   {
     n: "Step 04",

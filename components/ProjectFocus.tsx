@@ -39,9 +39,7 @@ export function ProjectFocus() {
             </p>
             <div className="rea-callout">
               <p>
-                <strong>The distinction matters.</strong> Participation is tied
-                to output and ownership of real assets, keeping structures
-                transparent, asset-linked, and aligned with Shariah principles
+                <strong>The distinction matters.</strong> Participation is tied to output and ownership of real assets, and each class is structured and independently valued by its own methodology — keeping structures transparent, asset-linked, and aligned with Shariah principles
               </p>
             </div>
           </div>

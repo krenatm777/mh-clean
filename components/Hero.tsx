@@ -20,9 +20,9 @@ export function Hero() {
             </h1>
             <p className="hero-lead reveal d2">
               MusharaqaHub structures Shariah-compliant participation in
-              productive, real-economy assets — anchoring digital ownership to
-              identifiable value, transparent documentation, and clearly defined
-              rights
+              productive, real-economy assets — so that each token is legally
+              backed by a share in a specific asset, with documented title and
+              clearly defined rights
             </p>
             <div className="hero-actions reveal d2">
               <a href="#contact" className="btn btn-primary">

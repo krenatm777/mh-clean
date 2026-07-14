@@ -12,7 +12,7 @@ const ITEMS = [
   {
     k: "Shariah",
     title: "Participation-based structuring",
-    text: "Transactions follow Musharakah principles under Shariah review, with formal supervision being established",
+    text: "Transactions are structured under Shariah supervision, following Musharakah profit-and-loss-sharing principles and AAOIFI standards",
   },
   {
     k: "Markets",
