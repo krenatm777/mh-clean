@@ -1,4 +1,5 @@
 const NAV = [
+  { href: "#mission", label: "Mission" },
   { href: "#about", label: "Platform" },
   { href: "#rea", label: "Real Assets" },
   { href: "#governance", label: "Governance" },
