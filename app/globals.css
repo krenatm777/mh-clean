@@ -72,11 +72,9 @@
   }
   header.site.scrolled{border-bottom-color:var(--line);background:rgba(246,243,234,.9);}
   .nav{display:flex;align-items:center;justify-content:space-between;height:76px;}
-  .brand{display:flex;align-items:center;gap:11px;}
-  .brand-mark{height:34px;width:auto;}
-  .brand-logo{height:38px;width:auto;display:block;}
-  header.site.scrolled .brand-logo{height:34px;}
-  .brand-name{font-family:var(--sans);font-weight:700;font-size:1.16rem;letter-spacing:-.012em;color:var(--ink);line-height:1;white-space:nowrap;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand-mark{height:42px;width:auto;}
+  .brand-name{font-family:var(--sans);font-weight:700;font-size:1.74rem;letter-spacing:-.012em;color:var(--ink);line-height:1;white-space:nowrap;}
   .brand-name b{color:var(--gold-deep);font-weight:700;}
   .brand-name.ondark{color:var(--paper);}
   .brand-name.ondark b{color:var(--gold);}
@@ -253,7 +251,8 @@
   footer.site{background:var(--ink-deep);color:var(--body-on-dark);padding:64px 0 40px;}
   .foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:40px;border-bottom:1px solid var(--line-on-dark);}
   .foot-logo{display:flex;align-items:center;gap:11px;}
-  .foot-logo .brand-mark{height:30px;}
+  .foot-logo .brand-mark{height:34px;}
+  .foot-logo .brand-name{font-size:1.2rem;}
   .foot-brand p{margin:1.2rem 0 0;max-width:34ch;color:var(--body-on-dark);font-size:.96rem;}
   .foot-nav{display:flex;gap:34px;flex-wrap:wrap;}
   .foot-nav a{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--body-on-dark);transition:color .25s var(--ease);}
