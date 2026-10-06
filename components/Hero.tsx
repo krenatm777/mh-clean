@@ -1,7 +1,7 @@
 const RAIL = [
   { k: "Jurisdiction", v: "Incorporated in the AIFC" },
   { k: "Standards", v: "Aligned with AAOIFI" },
-  { k: "Focus", v: "Real Economic Assets" },
+  { k: "Focus", v: "Real World Assets" },
   { k: "Markets", v: "Pathway to AIX listing" },
 ];
 
@@ -16,11 +16,11 @@ export function Hero() {
             </span>
             <h1 className="reveal d1">
               Institutional infrastructure for the tokenization of{" "}
-              <em>real economic assets</em>
+              <em>real world assets</em>
             </h1>
             <p className="hero-lead reveal d2">
               MusharaqaHub structures Shariah-compliant participation in
-              productive, real-economy assets — so that each token is legally
+              productive, real-world assets — so that each token is legally
               backed by a share in a specific asset, with documented title and
               clearly defined rights
             </p>

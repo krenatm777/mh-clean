@@ -17,7 +17,7 @@ const ASSETS = [
   {
     num: "04",
     title: "Productive enterprises",
-    text: "Operating assets that generate real economic output",
+    text: "Operating assets that generate tangible economic output",
   },
 ];
 
@@ -27,15 +27,15 @@ export function ProjectFocus() {
       <div className="shell">
         <div className="rea-wrap">
           <div className="block-head reveal">
-            <span className="eyebrow">Real Economic Assets</span>
+            <span className="eyebrow">Real World Assets</span>
             <h2 className="section-title">
-              Beyond RWA — assets that actually produce
+              Real-world assets that actually produce
             </h2>
             <p className="section-lead">
-              Real Economic Assets (REA) is our term for purely productive,
-              real-economy assets, distinct from the broader universe of
-              financial instruments often grouped under &ldquo;RWA.&rdquo; We
-              focus on value that is created, not merely traded
+              Real World Assets (RWA) are tangible, income-generating assets
+              from the productive economy, brought on-chain so that each token
+              is backed by a documented share in a specific asset. We focus on
+              value that is created, not merely traded
             </p>
             <div className="rea-callout">
               <p>

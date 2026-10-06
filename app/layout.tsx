@@ -24,29 +24,24 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.musharaqahub.com"),
-  title: "MusharaqaHub | Infrastructure for Real Economic Assets",
+  title: "MusharaqaHub | Infrastructure for Real World Assets",
   description:
-    "MusharaqaHub structures Shariah-compliant participation in productive, real economic assets (REA) — anchoring digital ownership to identifiable value, transparent documentation, and clearly defined rights.",
+    "MusharaqaHub structures Shariah-compliant participation in productive, real-world assets (RWA) — anchoring digital ownership to identifiable value, transparent documentation, and clearly defined rights.",
   alternates: {
     canonical: "https://www.musharaqahub.com/",
   },
   openGraph: {
-    title: "MusharaqaHub | Infrastructure for Real Economic Assets",
+    title: "MusharaqaHub | Infrastructure for Real World Assets",
     description:
-      "Shariah-compliant infrastructure for the tokenization of real economic assets, incorporated in the AIFC.",
+      "Shariah-compliant infrastructure for the tokenization of real-world assets, incorporated in the AIFC.",
     type: "website",
     siteName: "MusharaqaHub",
   },
   twitter: {
     card: "summary_large_image",
-    title: "MusharaqaHub | Infrastructure for Real Economic Assets",
+    title: "MusharaqaHub | Infrastructure for Real World Assets",
     description:
-      "Shariah-compliant infrastructure for the tokenization of real economic assets.",
-  },
-  icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
-    apple: "/icon.svg",
+      "Shariah-compliant infrastructure for the tokenization of real-world assets.",
   },
 };
 

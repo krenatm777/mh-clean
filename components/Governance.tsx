@@ -26,7 +26,7 @@ export function Governance() {
     <section className="block governance" id="governance">
       <img
         className="watermark"
-        src="/logo-mono-white.svg"
+        src="/logo-icon.png"
         alt=""
         aria-hidden="true"
       />

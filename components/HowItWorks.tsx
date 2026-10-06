@@ -2,7 +2,7 @@ const STEPS = [
   {
     n: "Step 01",
     title: "Asset onboarding",
-    text: "A real economic asset is identified, documented, and structured for compliance",
+    text: "A real-world asset is identified, documented, and structured for compliance",
   },
   {
     n: "Step 02",

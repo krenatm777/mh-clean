@@ -3,7 +3,7 @@ export function Mission() {
     <section className="block mission" id="mission">
       <img
         className="watermark"
-        src="/logo-mono-white.svg"
+        src="/logo-icon.png"
         alt=""
         aria-hidden="true"
       />

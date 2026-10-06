@@ -14,14 +14,14 @@ export function Footer() {
         <div className="foot-top">
           <div className="foot-brand">
             <div className="foot-logo">
-              <img className="brand-mark" src="/logo-mono-white.svg" alt="" />
+              <img className="brand-mark" src="/logo-icon.png" alt="" />
               <span className="brand-name ondark">
                 Musharaqa<b>Hub</b>
               </span>
             </div>
             <p>
-              Shariah-compliant infrastructure for the tokenization of real
-              economic assets.
+              Shariah-compliant infrastructure for the tokenization of
+              real-world assets.
             </p>
           </div>
           <nav className="foot-nav" aria-label="Footer">

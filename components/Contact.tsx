@@ -14,15 +14,16 @@ export function Contact() {
               <div className="cd-row">
                 <div className="k">Email</div>
                 <div className="v">
-                  <a href="mailto:chairman@musharaqahub.com">
-                    chairman@musharaqahub.com
+                  <a href="mailto:info@musharaqahub.com">
+                    info@musharaqahub.com
                   </a>
                 </div>
               </div>
               <div className="cd-row">
                 <div className="k">Location</div>
                 <div className="v">
-                  Astana International Financial Centre, Kazakhstan
+                  Astana International Financial Centre, Mangilik El Avenue,
+                  55/23, office 334, Astana, Kazakhstan
                 </div>
               </div>
             </div>
@@ -35,7 +36,7 @@ export function Contact() {
               <li>The asset, mandate, or partnership you have in mind</li>
               <li>Relevant jurisdiction and timeline</li>
             </ul>
-            <a href="mailto:chairman@musharaqahub.com" className="btn btn-primary">
+            <a href="mailto:info@musharaqahub.com" className="btn btn-primary">
               Email our team <span className="arw">&rarr;</span>
             </a>
           </div>

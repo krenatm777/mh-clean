@@ -5,7 +5,7 @@ const PRINCIPLES = [
   },
   {
     title: "Anchored to real assets",
-    text: "Every position is linked to an identifiable, income-generating real economic asset with documented rights",
+    text: "Every position is linked to an identifiable, income-generating real-world asset with documented rights",
   },
   {
     title: "Digital by infrastructure",

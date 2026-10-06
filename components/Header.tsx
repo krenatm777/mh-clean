@@ -25,10 +25,7 @@ export function Header() {
     <header className={`site${scrolled ? " scrolled" : ""}`} id="top">
       <div className="shell nav">
         <a href="#top" className="brand" aria-label="MusharaqaHub home">
-          <img className="brand-mark" src="/logo-mono-black.svg" alt="" />
-          <span className="brand-name">
-            Musharaqa<b>Hub</b>
-          </span>
+          <img className="brand-logo" src="/logo-wordmark.svg" alt="MusharaqaHub" />
         </a>
 
         <nav className="nav-links" aria-label="Primary">
