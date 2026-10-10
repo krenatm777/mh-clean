@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="meta.title">Request access to MusharaqaHub</title>
+<meta name="description" content="Request access to the MusharaqaHub platform under a limited software licence.">
+<link rel="icon" href="logo-icon.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site" id="top">
+  <div class="shell nav">
+    <a href="index.html" class="brand"><img class="mark" src="logo-icon.png" alt=""><span class="bn">Musharaqa<b>Hub</b></span></a>
+    <div class="nav-cta">
+      <div class="lang-switch">
+        <button type="button" data-lang="en" class="active" onclick="setLang('en')">EN</button>
+        <button type="button" data-lang="ru" onclick="setLang('ru')">RU</button>
+      </div>
+      <a href="index.html" class="btn btn-ghost" data-i18n="back">← Home</a>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:48px">
+  <div class="shell form-wrap">
+    <span class="eyebrow" data-i18n="eyebrow">Request</span>
+    <h1 style="margin-top:10px" data-i18n="h1">Request access to the MusharaqaHub platform</h1>
+    <p class="lead" style="margin-top:14px" data-i18n="lead">Fill in the form — a specialist will contact you to clarify the details and prepare an offer under a limited software licence.</p>
+
+    <form id="orderForm" method="post" action="#" onsubmit="return submitForm(event)">
+      <h2 style="font-size:1.25rem;margin-top:42px" data-i18n="b1">1. Applicant information</h2>
+
+      <div class="fgroup">
+        <label data-i18n="f.type">Applicant type *</label>
+        <div class="radio-row">
+          <label class="opt"><input type="radio" name="applicant_type" value="Individual" required><span data-i18n="f.type1">Individual</span></label>
+          <label class="opt"><input type="radio" name="applicant_type" value="Sole proprietor"><span data-i18n="f.type2">Sole proprietor</span></label>
+          <label class="opt"><input type="radio" name="applicant_type" value="Legal entity"><span data-i18n="f.type3">Legal entity</span></label>
+        </div>
+      </div>
+
+      <div class="fgroup">
+        <label data-i18n="f.name">Full name *</label>
+        <input type="text" name="fio" required>
+        <div class="hint" data-i18n="f.nameh">Provide the details of the person authorised to act on behalf of the applicant.</div>
+      </div>
+
+      <div class="grid-2">
+        <div class="fgroup"><label data-i18n="f.org">Organisation (for SP and legal entities)</label><input type="text" name="org"></div>
+        <div class="fgroup"><label data-i18n="f.bin">BIN / IIN</label><input type="text" name="bin"></div>
+      </div>
+
+      <div class="grid-2">
+        <div class="fgroup"><label data-i18n="f.country">Country of registration</label><input type="text" name="country" value="Republic of Kazakhstan"></div>
+        <div class="fgroup"><label data-i18n="f.phone">Phone *</label><input type="tel" name="phone" required placeholder="+7"></div>
+      </div>
+
+      <div class="fgroup">
+        <label data-i18n="f.email">E-mail *</label>
+        <input type="email" name="email" required>
+        <div class="hint" data-i18n="f.emailh">The offer and the contract will be sent to this address.</div>
+      </div>
+
+      <h2 style="font-size:1.25rem;margin-top:42px" data-i18n="b2">2. Intellectual-property object</h2>
+
+      <div class="fgroup">
+        <label data-i18n="f.iptype">IP object type *</label>
+        <div class="radio-row">
+          <label class="opt"><input type="radio" name="ip_type" value="Work" required><span data-i18n="f.ip1">Work (text, image, audio, video)</span></label>
+          <label class="opt"><input type="radio" name="ip_type" value="Software"><span data-i18n="f.ip2">Software</span></label>
+          <label class="opt"><input type="radio" name="ip_type" value="Industrial design / utility model"><span data-i18n="f.ip3">Industrial design / utility model</span></label>
+          <label class="opt"><input type="radio" name="ip_type" value="Trademark / name"><span data-i18n="f.ip4">Trademark / name</span></label>
+          <label class="opt"><input type="radio" name="ip_type" value="Know-how / database"><span data-i18n="f.ip5">Know-how / database</span></label>
+          <label class="opt"><input type="radio" name="ip_type" value="Other"><span data-i18n="f.ip6">Other</span></label>
+        </div>
+      </div>
+
+      <div class="fgroup">
+        <label data-i18n="f.ipdesc">Brief description of the IP object</label>
+        <textarea name="ip_desc"></textarea>
+        <div class="hint" data-i18n="f.ipdesch">Describe the object in a few sentences — this helps us prepare a preliminary scope estimate.</div>
+      </div>
+
+      <div class="fgroup">
+        <label data-i18n="f.docs">Availability of prepared documents</label>
+        <div class="radio-row">
+          <label class="opt"><input type="radio" name="docs" value="Yes"><span data-i18n="f.docs1">Yes, documents are prepared</span></label>
+          <label class="opt"><input type="radio" name="docs" value="Partly"><span data-i18n="f.docs2">Partly prepared</span></label>
+          <label class="opt"><input type="radio" name="docs" value="No"><span data-i18n="f.docs3">Not prepared, assistance needed</span></label>
+        </div>
+      </div>
+
+      <div class="fgroup">
+        <label data-i18n="f.modules">Planned platform modules (multiple choice)</label>
+        <div class="check-col">
+          <label class="opt"><input type="checkbox" name="modules" value="IP data processing"><span data-i18n="f.mod1">Digital processing of IP data</span></label>
+          <label class="opt"><input type="checkbox" name="modules" value="Digital register"><span data-i18n="f.mod2">Digital register of IP records</span></label>
+          <label class="opt"><input type="checkbox" name="modules" value="Ethical-compliance check"><span data-i18n="f.mod3">Ethical-compliance check (Shariah)</span></label>
+          <label class="opt"><input type="checkbox" name="modules" value="Payment integration"><span data-i18n="f.mod4">Payment connection</span></label>
+          <label class="opt"><input type="checkbox" name="modules" value="Technical maintenance"><span data-i18n="f.mod5">Technical maintenance</span></label>
+        </div>
+      </div>
+
+      <h2 style="font-size:1.25rem;margin-top:42px" data-i18n="b3">3. Cost and terms</h2>
+      <div class="callout" style="margin-top:14px">
+        <p data-i18n="b3p"><strong>Base access cost — 15 000 USD.</strong> Card payments are processed in tenge (KZT) at the NBK rate on the payment date. The final cost, scope and licence term are agreed individually based on the analysis of your IP object and fixed in the contract (offer). Payment can be made in tranches.</p>
+      </div>
+
+      <div class="fgroup">
+        <label data-i18n="f.pref">Preferred contact method</label>
+        <div class="radio-row">
+          <label class="opt"><input type="radio" name="contact_pref" value="E-mail"><span>E-mail</span></label>
+          <label class="opt"><input type="radio" name="contact_pref" value="Phone"><span data-i18n="f.pref2">Phone</span></label>
+          <label class="opt"><input type="radio" name="contact_pref" value="Messenger"><span data-i18n="f.pref3">Messenger (specify in comment)</span></label>
+        </div>
+      </div>
+
+      <div class="fgroup"><label data-i18n="f.comment">Comment (optional)</label><textarea name="comment"></textarea></div>
+
+      <h2 style="font-size:1.25rem;margin-top:42px" data-i18n="b4">4. Consents and confirmations</h2>
+
+      <div class="consent"><input type="checkbox" id="c1" required><label for="c1" data-i18n="c1">I confirm that I understand MusharaqaHub is software provided under a limited licence (SaaS) and intended for processing data about intellectual-property objects. I understand that the platform is not a financial institution, does not provide investment or brokerage services, does not carry out transactions with money, securities or digital assets, and does not guarantee any profit or financial result.</label></div>
+      <div class="consent"><input type="checkbox" id="c2" required><label for="c2" data-i18n="c2">I consent to the processing of my personal data for the purposes of reviewing this request, preparing an offer and concluding a contract, in accordance with the laws of the Republic of Kazakhstan on personal data and the <a href="privacy.html">Privacy Policy</a>.</label></div>
+      <div class="consent"><input type="checkbox" id="c3" required><label for="c3" data-i18n="c3">I confirm that I hold the necessary rights to the specified intellectual-property object and am authorised to submit the relevant data for processing by MusharaqaHub.</label></div>
+      <div class="consent"><input type="checkbox" id="c4" required><label for="c4" data-i18n="c4">I have read and agree to the <a href="oferta.html">Public Offer</a> and the <a href="refund.html">Refund Terms</a>.</label></div>
+
+      <button type="submit" class="btn btn-primary btn-lg btn-block" style="margin-top:28px" data-i18n="submit">Submit request</button>
+      <p class="form-note" data-i18n="subnote">By clicking "Submit request" you confirm your agreement with the personal-data processing terms and the terms of access to the MusharaqaHub platform.</p>
+    </form>
+
+    <div style="margin-top:48px;background:var(--paper-2);border:1px solid var(--line);border-radius:12px;padding:28px">
+      <h2 style="font-size:1.25rem" data-i18n="after.h">What happens after you submit</h2>
+      <ul class="after-steps">
+        <li data-i18n="after.1">Your request is registered and receives a unique number.</li>
+        <li data-i18n="after.2">Within 1 (one) business day a MusharaqaHub specialist contacts you to clarify the parameters of your IP object.</li>
+        <li data-i18n="after.3">Based on the analysis, an individual offer and a contract (offer) are prepared.</li>
+        <li data-i18n="after.4">After the terms are agreed, payment is made by bank card via a secure payment page and access to the platform is granted.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="shell">
+    <p class="copy">© 2026 MusharaqaHub ·
+      <a href="oferta.html" style="display:inline" data-i18n="foot.offer">Offer</a> ·
+      <a href="privacy.html" style="display:inline" data-i18n="foot.privacy">Privacy</a> ·
+      <a href="refund.html" style="display:inline" data-i18n="foot.refund">Refund</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+const RU = {
+ "meta.title":"Заявка на доступ к MusharaqaHub","back":"← На главную","eyebrow":"Заявка",
+ "h1":"Заявка на предоставление доступа к платформе MusharaqaHub",
+ "lead":"Заполните форму — специалист свяжется с вами для уточнения деталей и подготовки предложения на условиях ограниченной лицензии на программное обеспечение.",
+ "b1":"1. Информация о заявителе",
+ "f.type":"Тип заявителя *","f.type1":"Физическое лицо","f.type2":"Индивидуальный предприниматель","f.type3":"Юридическое лицо",
+ "f.name":"Фамилия, Имя, Отчество (полностью) *","f.nameh":"Укажите данные лица, уполномоченного действовать от имени заявителя.",
+ "f.org":"Название организации (для ИП и юрлиц)","f.bin":"БИН / ИИН",
+ "f.country":"Страна регистрации","f.phone":"Контактный телефон *",
+ "f.email":"Контактный e-mail *","f.emailh":"На указанный адрес будет направлено предложение и договор (оферта).",
+ "b2":"2. Информация об объекте интеллектуальной собственности",
+ "f.iptype":"Тип объекта ИС *","f.ip1":"Произведение (текст, изображение, аудио, видео)","f.ip2":"Программное обеспечение","f.ip3":"Промышленный образец / полезная модель","f.ip4":"Товарный знак / наименование","f.ip5":"Ноу-хау / база данных","f.ip6":"Иное",
+ "f.ipdesc":"Краткое описание объекта ИС","f.ipdesch":"Опишите объект в нескольких предложениях — это поможет подготовить предварительную оценку объёма работ.",
+ "f.docs":"Наличие подготовленных документов","f.docs1":"Да, документы подготовлены","f.docs2":"Частично подготовлены","f.docs3":"Не подготовлены, требуется помощь",
+ "f.modules":"Планируемые модули платформы (можно выбрать несколько)","f.mod1":"Цифровая обработка данных об ИС","f.mod2":"Цифровой реестр сведений об ИС","f.mod3":"Проверка на соответствие нормам этики (Шариа)","f.mod4":"Подключение оплаты услуг","f.mod5":"Техническое сопровождение",
+ "b3":"3. Стоимость и условия",
+ "b3p":"<strong>Базовая стоимость доступа — 15 000 USD.</strong> Оплата банковской картой проводится в тенге (KZT) по курсу НБ РК на дату платежа. Окончательная стоимость, состав услуг и срок лицензии согласовываются индивидуально по результатам анализа объекта ИС и фиксируются в договоре (оферте). Возможна оплата траншами.",
+ "f.pref":"Предпочтительный способ связи","f.pref2":"Телефон","f.pref3":"Мессенджер (указать в комментарии)",
+ "f.comment":"Комментарий (необязательно)",
+ "b4":"4. Согласия и подтверждения",
+ "c1":"Я подтверждаю, что ознакомлен(а) с тем, что MusharaqaHub является программным обеспечением, предоставляемым на условиях ограниченной лицензии (SaaS) и предназначенным для обработки данных об объектах интеллектуальной собственности. Я понимаю, что платформа не является финансовой организацией, не оказывает инвестиционных и брокерских услуг, не осуществляет операций с денежными средствами, ценными бумагами и цифровыми активами и не гарантирует получение прибыли или иного финансового результата.",
+ "c2":"Я даю согласие на обработку моих персональных данных в целях рассмотрения заявки, подготовки предложения и заключения договора, в соответствии с законодательством Республики Казахстан о персональных данных и их защите и <a href=\"privacy.html\">Политикой конфиденциальности</a>.",
+ "c3":"Я подтверждаю, что обладаю необходимыми правами на указанный объект интеллектуальной собственности и уполномочен(а) передавать соответствующие данные для обработки платформой MusharaqaHub.",
+ "c4":"Я ознакомлен(а) и согласен(на) с условиями <a href=\"oferta.html\">Публичной оферты</a> и <a href=\"refund.html\">Условиями возврата</a>.",
+ "submit":"Отправить заявку","subnote":"Нажимая «Отправить заявку», вы подтверждаете согласие с условиями обработки персональных данных и условиями предоставления доступа к платформе MusharaqaHub.",
+ "after.h":"Что происходит после отправки заявки","after.1":"Заявка регистрируется и получает уникальный номер.","after.2":"В течение 1 (одного) рабочего дня с вами связывается специалист MusharaqaHub для уточнения параметров объекта ИС.","after.3":"По результатам анализа формируется индивидуальное предложение и договор (оферта).","after.4":"После согласования условий производится оплата банковской картой через защищённую платёжную страницу, и предоставляется доступ к платформе.",
+ "foot.offer":"Оферта","foot.privacy":"Конфиденциальность","foot.refund":"Возврат"
+};
+function setLang(l){
+  document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n');
+    if(l==='ru'){ if(el.getAttribute('data-en')===null) el.setAttribute('data-en',el.innerHTML); if(RU[k]!=null) el.innerHTML=RU[k]; }
+    else if(el.getAttribute('data-en')!==null){ el.innerHTML=el.getAttribute('data-en'); }
+  });
+  const t=document.querySelector('[data-i18n="meta.title"]'); if(t) document.title=t.textContent;
+  document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.toggle('active',b.getAttribute('data-lang')===l));
+  try{localStorage.setItem('lang',l)}catch(e){}
+}
+function submitForm(e){e.preventDefault();alert(document.documentElement.lang==='ru'?'Форма демонстрационная. Подключите обработчик (action) перед запуском.':'This is a demo form. Connect a handler (action) before launch.');return false;}
+try{const sv=localStorage.getItem('lang'); if(sv==='ru') setLang('ru');}catch(e){}
+</script>
+</body>
+</html>
